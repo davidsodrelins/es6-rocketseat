@@ -1,3 +1,4 @@
 { 
-    "presets": ["@babel/preset-env"] //o pacote preset-env basicamente ele vai entender qual é o ambiente em que se está trabalhando (no caso aqui o browser) e vai converter as features do es6, es7 etc para o navegador entender
+    "presets": ["@babel/preset-env"], //o pacote preset-env basicamente ele vai entender qual é o ambiente em que se está trabalhando (no caso aqui o browser) e vai converter as features do es6, es7 etc para o navegador entender
+    "plugins" : ["@babel/plugin-proposal-object-rest-spread"]
 }

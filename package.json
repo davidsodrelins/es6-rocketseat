@@ -4,12 +4,17 @@
   "main": "index.js",
   "author": "David Sodré <davidsodre_ba@hotmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4"
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   },
   "scripts": {
-    "dev": "babel ./main.js -o ./bundle.js -w"
+    "dev": "babel ./main.js -o ./bundle.js -w",
+    "devWebpack": "webpack --mode=development -w" 
   }
 }

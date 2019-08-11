@@ -1,100 +1,108 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./main.js");
-/******/ })
-/************************************************************************/
-/******/ ({
+"use strict";
 
-/***/ "./main.js":
-/*!*****************!*\
-  !*** ./main.js ***!
-  \*****************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-eval("function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Usuario =\n/*#__PURE__*/\nfunction () {\n  //criação da classe Usuario\n  function Usuario(email, senha) {\n    _classCallCheck(this, Usuario);\n\n    //método construtor recebe email e senha\n    this.email = email; //atribuição do paramento da classe ao da função\n\n    this.email = senha;\n  }\n\n  _createClass(Usuario, [{\n    key: \"isAdmin\",\n    value: function isAdmin() {\n      // método que verifica se o usuário é um admin\n      return this.admin === true; // retorno true caso o admin seja true\n    }\n  }]);\n\n  return Usuario;\n}();\n\nvar Admin =\n/*#__PURE__*/\nfunction (_Usuario) {\n  _inherits(Admin, _Usuario);\n\n  // classe admin herda de usuario\n  function Admin(email, senha) {\n    var _this;\n\n    _classCallCheck(this, Admin);\n\n    // construtor de admin tbm recebe email e senha\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Admin).call(this, email, senha)); //super para pegar os atributos e métodos da classe pai\n\n    _this.admin = true; //parametro de admin é true pois o é um Admin\n\n    return _this;\n  }\n\n  return Admin;\n}(Usuario);\n\nvar User1 = new Usuario('email@teste.com', 'senha123'); // instancia de usuario\n\nvar Adm1 = new Admin('email@teste.com', 'senha123'); // instancia de admin\n\nconsole.log(User1.isAdmin()); //retorna se o usuario é admin - false\n\nconsole.log(Adm1.isAdmin()); //retorna se o admin é admin = true\n\n//# sourceURL=webpack:///./main.js?");
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-/***/ })
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-/******/ });
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+//Exercicio 02 - copie e cole no main.js
+var Usuario =
+/*#__PURE__*/
+function () {
+  //criação da classe Usuario
+  function Usuario(email, senha) {
+    _classCallCheck(this, Usuario);
+
+    //método construtor recebe email e senha
+    this.email = email; //atribuição do paramento da classe ao da função
+
+    this.email = senha;
+  }
+
+  _createClass(Usuario, [{
+    key: "isAdmin",
+    value: function isAdmin() {
+      // método que verifica se o usuário é um admin
+      return this.admin === true; // retorno true caso o admin seja true
+    }
+  }]);
+
+  return Usuario;
+}();
+
+var Admin =
+/*#__PURE__*/
+function (_Usuario) {
+  _inherits(Admin, _Usuario);
+
+  // classe admin herda de usuario
+  function Admin(email, senha) {
+    var _this;
+
+    _classCallCheck(this, Admin);
+
+    // construtor de admin tbm recebe email e senha
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Admin).call(this, email, senha)); //super para pegar os atributos e métodos da classe pai
+
+    _this.admin = true; //parametro de admin é true pois o é um Admin
+
+    return _this;
+  }
+
+  return Admin;
+}(Usuario);
+
+var usuarios = [{
+  nome: 'Diego',
+  idade: 23,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Gabriel',
+  idade: 15,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Lucas',
+  idade: 30,
+  empresa: 'Facebook'
+}]; //2.1 Crie uma variável que contenha todas idades dos usuários: [23, 15, 30]
+//funcao map
+
+var idades = usuarios.map(function (item) {
+  return item.idade;
+});
+console.log("idades: ".concat(idades)); //2.2 Crie uma variáveis que tenha apenas os usuários que trabalham na Rocketseat e com mais de 18
+//anos: [{ nome: 'Diego', idade: 23, empresa: 'Rocketseat' }]
+
+var usersRocketSeat = usuarios.filter(function (item) {
+  return item.idade > 18 && item.empresa == 'Rocketseat';
+});
+console.log(usersRocketSeat); //2.3 Utilizando o find Crie uma variável que procura por 
+//um usuário que trabalhe na empresa Google: undefined
+
+var userGoogle = usuarios.find(function (item) {
+  return item.empresa == 'Google';
+});
+console.log(userGoogle); //2.4 Unindo operações
+//Multiplique a idade de todos usuários por dois e depois realize um filtro nos usuários que possuem
+//no máximo 50 anos:
+
+usuarios.map(function (item) {
+  item.idade = item.idade * 2;
+});
+var find50 = usuarios.filter(function (item) {
+  return item.idade <= 50;
+});
+console.log(find50);
